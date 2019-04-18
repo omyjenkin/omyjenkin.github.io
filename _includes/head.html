@@ -1,16 +1,40 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <!--[if lte IE 9]><meta http-equiv="refresh" content="0;url={{ "/ie.html" | prepend: site.baseurl }}"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1; minimum-scale=1; user-scalable=no;">
+  {% if page.desc %}
+    <meta content="{{ page.desc }}" name="description">
+  {% endif %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="baseurl" content="{{ site.baseurl }}">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>
+    {% if page.title != "index" %}
+        {{ site.title }}|{{ page.title }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
+  </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <!-- Main CSS -->
+  <link href="{{ "/static/assets/app-20190417.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
 
-  <script src="{{ "/assets/js/prefixfree.js" | prepend: site.baseurl }}"></script>
+  <!-- Main Scripts -->
+  <script src="{{"/static/assets/app-20190417.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/blog-20190417.min.js"| prepend: site.baseurl }}"></script>
+
+  <!-- Google AdSense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6196184620190417",
+      enable_page_level_ads: true
+    });
+  </script>
 </head>
