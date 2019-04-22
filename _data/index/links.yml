@@ -3,16 +3,11 @@
   first_name:
   desc: CEO
   website: https://www.google.com
-  email: ceo@google.com
+  email: omyjenkin@google.com
 
 - last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
+  first_name: Jenkin
+  desc: Support Jenkin
+  website: https://github.com/omyjenkin/
+  email: omyjenkin@163.com
 
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
