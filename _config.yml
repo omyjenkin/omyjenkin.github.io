@@ -31,8 +31,14 @@ author:  # change following line to your infomation.
   desc: Introduce myself will be here.  # Describe yourself.
 
 # comment
-disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  #name: jalpc
+comments:  
+  gitalk: true
+  gitalk_clientID: 'Client ID'
+  gitalk_Secret: 'Client Secret'
+  gitalk_repo: 'omyjenkin.github.io'
+  gitalk_owner: 'omyjenkin'
+  gitalk_admin: 'omyjenkin'
+  distractionFreeMode: true
 
 # analytics
 ## google analytics
